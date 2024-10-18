@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Page description">
+    <meta name="keywords" content="keywords, separated, by, commas">
+    <meta name="author" content="Page author">
+    <title>Page Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <style>
+        body{
+            font-family: 'Orbitron', sans-serif;
+            background-color: black;
+        }
+    </style>
+    <img id="sun" alt="Image 1" style="cursor: pointer;" src="https://media0.giphy.com/media/PNf2Ke7gn6oDK/giphy.gif">
+    <img id="3" style="display: none; cursor: pointer;" src = "https://media.licdn.com/dms/image/v2/D4D03AQEHsOhHh5AhdQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1721127655299?e=2147483647&v=beta&t=81OB6X67K6V76WcZtGfUe1lcHFvMta716Bcy_iKf6bY">
+    <img id="2" alt="Image 2" style="display: none; cursor: pointer;" src="https://i1.sndcdn.com/artworks-000313097316-lo48hi-t500x500.jpg">
+    <img id="merk" alt="Image 2" src="https://i.gifer.com/origin/10/10da00d2f3307ee5038be4b1680cb5f2_w200.gif">
+    <img id="earth" style="width: 300px; height: 300px;" src="https://images.delfi.lt/media-api-image-cropper/v1/9cd21150-fa4a-11ed-af7f-8d416214bbf5.jpg">
+    <img id="mars" alt="Image 2" style="width: 300px; height: 300px;" src="https://upload.wikimedia.org/wikipedia/commons/3/34/Spinning_Mars.gif">
+    
+    <p id="output" style="color: whitesmoke; text-align: center; background-color: #333; border: 2px solid whitesmoke; padding: 20px; width: 80%; margin: 20px auto; border-radius: 10px;"></p>
+
+    <script>
+        /*$(document).ready(function() {
+            $('#1').click(function() {
+                $('#1').fadeOut();
+                $('#2').fadeIn();
+
+                var text = "йей привет";
+                var words = text.split(" "); 
+                var index = 0; 
+
+        function printWords() {
+            if (index < words.length) {
+                $("#output").append(words[index] + " ");
+                index++;
+                setTimeout(printWords, 500); 
+            }
+        }
+
+    printWords(); 
+            });
+            
+        });
+
+        $(document).keydown(function(event) {
+            if (event.key === "Enter") {
+            alert("Spawn best teacher ever?");
+            $('#2').fadeOut();
+            $('#3').fadeIn();
+            alert("Alex join chat :) ");
+    }});*/
+
+        $(document).ready(function() {
+            $('#mars').click(function() {
+                var text = "Mars is the fourth planet from the Sun. The surface of Mars is orange-red because it is covered in iron(III) oxide dust, giving it the nickname the Red Planet";
+                var words = text.split(" "); 
+                var index = 0;
+                
+                $("#output").empty();  
+
+                function printWords() {
+                    if (index < words.length) {
+                    $("#output").append(words[index] + " ");
+                    index++;
+                    setTimeout(printWords, 100); 
+                    }
+                }
+                printWords(); 
+            });
+            $('#merk').click(function() {
+                var text = "Mercury is the first planet from the Sun and the smallest in the Solar System. In English, it is named after the ancient Roman god Mercurius (Mercury), god of commerce and communication, and the messenger of the gods. Mercury is classified as a terrestrial planet, with roughly the same surface gravity as Mars. The surface of Mercury is heavily cratered, as a result of countless impact events that have accumulated over billions of years. Its largest crater, Caloris Planitia, has a diameter of 1,550 km (960 mi), which is about one-third the diameter of the planet (4,880 km or 3,030 mi).";
+                var words = text.split(" "); 
+                var index = 0;
+                
+                $("#output").empty(); 
+
+                function printWords() {
+                    if (index < words.length) {
+                    $("#output").append(words[index] + " ");
+                    index++;
+                    setTimeout(printWords, 100); 
+                    }
+                }
+                printWords(); 
+            });
+            $('#sun').click(function() {
+                var text = "The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies. It is by far the most important source of energy for life on Earth. The Sun has been an object of veneration in many cultures. It has been a central subject for astronomical research since antiquity.";
+                var words = text.split(" "); 
+                var index = 0;
+
+                $("#output").empty(); 
+                
+                function printWords() {
+                    if (index < words.length) {
+                    $("#output").append(words[index] + " ");
+                    index++;
+                    setTimeout(printWords, 100); 
+                    }
+                }
+                printWords(); 
+            });
+            $('#earth').click(function() {
+                var text = "Its just an eath, where Billy Harrington and Alexey Veseliy was born";
+                var words = text.split(" "); 
+                var index = 0;
+
+                $("#output").empty(); 
+                
+                function printWords() {
+                    if (index < words.length) {
+                    $("#output").append(words[index] + " ");
+                    index++;
+                    setTimeout(printWords, 100); 
+                    }
+                }
+                printWords(); 
+            });
+            
+
+        });
+            
+
+    
+            
+    
+    
+    </script>
+</body>
+</html>
